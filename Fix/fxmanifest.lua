@@ -6,9 +6,9 @@ author 'ZakyLuvya'
 description 'Fix Vehicle'
 
 client_script {
-    'client/cl_fix.lua'
+    'client/main.lua'
 }
 
 server_script {
-    'server/sv_fix.lua'
+    'server/main.lua'
 }
