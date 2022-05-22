@@ -5,3 +5,5 @@ AddEventHandler('chatMessage', function(source, n, msg)
 		CancelEvent()
 	end
 end)
+
+TriggerEvent('chat:addSuggestion', '/fix', 'Ripara veicolo')
