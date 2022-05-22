@@ -1,4 +1,4 @@
-function Scrivistacazzodiscritta(x, y, z, text, scale)
+function staffhud(x, y, z, text, scale)
 	local onScreen, _x, _y = World3dToScreen2d(x, y, z)
 	local pX, pY, pZ = table.unpack(GetGameplayCamCoords())
 	SetTextScale(scale, scale)
@@ -13,13 +13,14 @@ function Scrivistacazzodiscritta(x, y, z, text, scale)
 end
 
 
-local fradibo = false
+local sthud = false
 RegisterCommand('staff', function(source, args, rawCommand)
     if args[1] == "on" then 
-        fradibo = true
-        ESX.ShowNotification("Staff attivato")
-    elseif args[1] == "off" then 
-        fradibo = false 
+        sthud = true
+        exports['okokNotify']:Alert('NOTIFICA', 'Staff attivato!', 5000, 'info')
+    else args[1] == "off" then 
+        sthud = false 
+        exports['okokNotify']:Alert('NOTIFICA', 'Staff Disattivato!', 5000, 'info')
     end
 end)
 
@@ -32,8 +33,8 @@ Citizen.CreateThread(function()
         local coords = GetEntityCoords(PlayerPedId(), false)
         local dist = Vdist2(Mycoords, coords)
         if dist < 5 then
-            if fradibo == true then
-                Scrivistacazzodiscritta(Mycoords.x,  Mycoords.y,  Mycoords.z + 1, "STAFF", 0.6)
+            if sthud == true then
+                staffhud(Mycoords.x,  Mycoords.y,  Mycoords.z + 1, "STAFF", 0.6)
             end
         end
     end
