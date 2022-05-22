@@ -6,5 +6,5 @@ author 'ZakyLuvya'
 description 'Car Speedometer'
 
 client_script {
-    'client/cl_speedometer.lua'
+    'client/main.lua'
 }
