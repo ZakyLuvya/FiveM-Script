@@ -13,9 +13,9 @@ RegisterCommand('+speedLimit', function()
             cruise = true
             local currentSpeed = (GetEntitySpeed(GetVehiclePedIsIn(GetPlayerPed(-1), false)))
             SetVehicleMaxSpeed(GetVehiclePedIsIn(GetPlayerPed(-1), false), currentSpeed)
-            exports['okokNotify']:Alert('Cruise control attivato!')
+            exports['okokNotify']:Alert('NOTIFICA', 'Cruise control attivato!', 5000, 'info')
         elseif cruise == true then
-            exports['okokNotify']:Alert('Cruise control disattivato!')
+            exports['okokNotify']:Alert('NOTIFICA', 'Cruise control disattivato!', 5000, 'info')
             cruise = false
             SetVehicleMaxSpeed(GetVehiclePedIsIn(GetPlayerPed(-1), false), 0.0)
         end
