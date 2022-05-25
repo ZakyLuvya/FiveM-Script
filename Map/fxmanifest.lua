@@ -6,5 +6,5 @@ author 'ZakyLuvya'
 description 'MiniMap Shower'
 
 client_script {
-    'client/cl_map.lua'
+    'client/main.lua'
 }
