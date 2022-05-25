@@ -1,5 +1,5 @@
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function()
   Citizen.Wait(9000)
-  ExecuteCommand('me ~r~Appena ~g~Arrivato~w~')    
+  ExecuteCommand('me Appena Arrivato')    
 end)
