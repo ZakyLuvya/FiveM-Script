@@ -3,8 +3,8 @@ fx_version 'adamant'
 game 'gta5'
 version '1.0.0'
 author 'ZakyLuvya'
-description 'Hud Color'
+description 'Weapon Wheel Color'
 
 client_script {
-    'client/cl_hud-color.lua'
+    'client/main.lua'
 }
